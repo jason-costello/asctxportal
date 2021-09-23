@@ -24,6 +24,14 @@ type Client struct {
 	students   []StudentSummary
 }
 
+func (c *Client) GetBaseURL() *url.URL{
+	return c.baseURL
+}
+
+func (c *Client) GetHttpClient() *http.Client{
+	return c.httpClient
+}
+
 func (c *Client) GetStudent() ([]Student, error) {
 
 	return nil, nil
